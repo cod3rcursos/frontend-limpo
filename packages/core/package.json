@@ -1,0 +1,22 @@
+{
+    "name": "@repo/core",
+    "version": "0.1.0",
+    "description": "",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "tsup src/index.ts --dts --minify",
+        "dev": "tsup src/index.ts --dts --watch",
+        "test": "jest --watchAll --collectCoverage"
+    },
+    "keywords": [],
+    "author": "Leonardo Moura Leitão",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/uuid": "^10.0.0",
+        "tsup": "^8.2.4"
+    },
+    "dependencies": {
+        "uuid": "^10.0.0"
+    }
+}

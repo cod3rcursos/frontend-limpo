@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --background: #ffffff;
+    --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #0a0a0a;
+        --foreground: #ededed;
+    }
+}
+
+body {
+    color: var(--foreground);
+    background: var(--background);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+}
+
+@layer components {
+    .input span {
+        @apply text-2xl;
+    }
+
+    .input input,
+    .input select {
+        @apply bg-zinc-800 text-white p-2 rounded-md;
+        @apply focus:outline-none focus:ring-2 focus:ring-zinc-500;
+        @apply text-2xl;
+    }
+
+    .button {
+        @apply flex justify-center items-center;
+        @apply h-full rounded-md px-1.5 py-2;
+        @apply text-xl;
+    }
+}
