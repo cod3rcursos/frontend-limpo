@@ -35,7 +35,7 @@ export default class Curso extends Entidade<Curso, CursoProps> {
 
     adicionarAula(): Curso {
         const aulas = [...this.props.aulas!]
-        const ordem = aulas.length
+        const ordem = aulas.length + 1
         aulas.push(Aula.vazia().clone({ ordem }).props)
         return this.clone({ aulas })
     }
